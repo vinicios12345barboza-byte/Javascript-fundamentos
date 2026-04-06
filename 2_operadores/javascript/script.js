@@ -43,7 +43,7 @@ console.log(`Podemos executar qualquer coisa aqui! ${console.log("Vinicios Bianc
 console.log(true);
 console.log(5 > 20);
 console.log(30 > 10);
-console.log(typeof false);
+console.log(typeof false); 
 
 // 9 - Comparações
 console.log(5 <= 5);
@@ -71,6 +71,8 @@ console.log(5 < 2 || 5 > 100);
 console.log(!true);
 console.log(!5 > 2);
 
+sarah jane
+
 console.log(10 * 2 >= 20 || 30 - 20 == 10); 
 
 // 12 - Empty Values
@@ -85,3 +87,6 @@ console.log(5 * null);
 console.log("teste" * "opa");
 console.log("10" + 1);
 console.log("10" - 1);
+
+var nome = "Vinicios"
+console.log(300 * 2 == 600 && nome == "Vinicios")
