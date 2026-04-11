@@ -1,4 +1,4 @@
-/*
+
 // 1 - Number
 console.log(typeof 2);  
 console.log(typeof 5.14);  
@@ -71,8 +71,6 @@ console.log(5 < 2 || 5 > 100);
 console.log(!true);
 console.log(!5 > 2);
 
-sarah jane
-
 console.log(10 * 2 >= 20 || 30 - 20 == 10); 
 
 // 12 - Empty Values
@@ -80,7 +78,7 @@ console.log(typeof null, typeof undefined);
 console.log(null === undefined);
 console.log(null == undefined);
 console.log(null == false);
-console.log(undefined == false); */
+console.log(undefined == false);
 
 // 13 - Mudança de tipos
 console.log(5 * null);
