@@ -59,13 +59,13 @@ do{
 } while( o > 0);
 
 
-for(let tabu = 0; tabu < 20; tabu++){
-    if(tabu % 2 === 0){
-        console.log("É par")
-    } else{
-        console.log("ÍMPAR")
-    }
-}
+// for(let tabu = 0; tabu < 20; tabu++){
+//     if(tabu % 2 === 0){
+//         console.log("É par")
+//     } else{
+//         console.log("ÍMPAR")
+//     }
+// }
 
 for(let numero = 1; numero < 11; numero++){
     console.log('5 x ' + numero  + ' = ' +  5*numero);
@@ -87,6 +87,51 @@ while(chute !== secreto){
 };
 
 
+let pqp = Number(prompt("Digite um número:"))
+let resto = pqp % 2;
+    if(resto === 0 ){
+        alert("É par")
+    } else{
+        alert("É ímpar")
+    }
+
+
+
+let autenticadoo = true;
+switch(autenticadoo){
+    case true:
+        console.log("Usuário logado");
+        break;
+    case false:
+            console;log("Usu[ario não autenticado")
+}
+
+let dia = Number(prompt("Digite um número"));
+switch(dia){
+    case 0:
+        console.log("Domingo");
+        break;
+    case 1:
+        console.log("Segunda");
+        break;
+    case 2:
+        console.log("Terça");
+        break;
+    case 3:
+        console.log("Quarta");
+        break;
+    case 4:
+        console.log("Quinta");
+        break;
+    case 5:
+        console.log("Sexta");
+        break;
+    case 6:
+        console.log("Sábado")
+        break;
+    default:
+        console.log("Não existe!")
+}
 
 // let infi = 1;
 // while( infi < 101 ){

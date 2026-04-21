@@ -205,12 +205,11 @@ while(i < 11){
 
 // 11 - do while
 let o = 10
-
 do{
     console.log(`Valor de o: ${o}`)
     o--
 } while(o > 1);
- */
+ 
 
 // 12 - for
 for( let y = 1; y < 11; y++){
@@ -236,5 +235,79 @@ for(let ui = 0; ui < 10; ui++ ){
 }
 }
 }
+*/
 
 // 14 - break
+for(let g  = 20; g > 10; g--){
+    console.log(`Valor de g é ${g}`);
+
+    if(g === 15){
+        console.log("O g é 15!")
+        break;
+    }
+}
+
+/* 
+for(let uiui = 50; uiui > 40; uiui--){
+   console.log(`O valor de uiui é ${uiui}`)
+
+  if(uiui === 45){
+      console.log("Uiui é 45")
+      break;
+  }
+}
+
+uii = 50
+while(uii > 40){
+    console.log(`Uiui é maior ${uii}`)
+    uii--;
+
+    if(uii === 46){
+        console.log(`é 46`)
+        break;
+    }
+}  */
+
+// 15 - continue
+for(let s = 1; s < 20; s++){
+    // operador resto = %
+    if(s % 2 === 0){
+        console.log('Par');
+        continue;
+    } else {
+        console.log("Ímpar")
+    }
+
+}
+
+// 16 - switch
+const job = "Programador"
+switch(job){
+    case "Advogado":
+        console.log("Você é advogado");
+        break;
+    case "Programador":
+        console.log("Você é DEV");
+        break;
+    case "Pizzaiolo":
+        console.log("Você é pizzaiolo");
+        break;
+    case "Engenheiro":
+        console.log("Você é engenheiro");
+        break;
+    default:
+        console.log("Registre seu trabalho no app.");
+}
+
+// switch "Errado"
+const l = 100
+switch(l){
+    case 200:
+        console.log("L 200");
+    case 100:
+        console.log("L 100");
+    case 10:
+        console.log("L 10");
+    default:
+        console.log("L não foi encontrado")
+}
