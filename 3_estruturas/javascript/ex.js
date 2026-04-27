@@ -87,14 +87,14 @@ while(chute !== secreto){
 };
 
 
-let pqp = Number(prompt("Digite um número:"))
-let resto = pqp % 2;
-    if(resto === 0 ){
-        alert("É par")
-    } else{
-        alert("É ímpar")
-    }
+let pqp = Number(prompt("Digite um número"));
+let resto = pqp % 2
 
+if( resto === 0){
+    alert('É par')
+} else{
+    alert("É impar")
+}
 
 
 let autenticadoo = true;
