@@ -38,3 +38,8 @@
 // }
 
 
+const somar = (y, x) =>{
+   return y + x
+}
+
+console.log(`A soma entre x e y é ${somar(5, 5)}`)

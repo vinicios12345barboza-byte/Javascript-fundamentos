@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e objetos</title>
+    <script src="javascript/script.js"></script>
+</head>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .foto {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #334155;
+      margin: 0 auto 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .cargo {
+      color: #38bdf8;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #22c55e;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+<body>
+ 
+   <div class="card">
+    <div class="foto"></div>
+    <h1 id="nome"></h1>
+    <p class="cargo" id="cargo"></p>
+    <p class="info" id="objetivo"></p>
+    <p class="info" id="idade"></p>
+
+    <a id="whatsapp" class="btn" target="_blank">Falar no WhatsApp</a>
+    
+  </div>
+
+  <script>
+    const eu = {
+      nome: "Vinicios",
+      idade: 19,
+      cargo: "Desenvolvedor em formação",
+      objetivo: "Buscando minha primeira oportunidade como dev",
+      telefone: "2198946527"
+    };
+    
+    document.getElementById("nome").innerText = eu.nome;
+    document.getElementById("cargo").innerText = eu.cargo;
+    document.getElementById("objetivo").innerText = eu.objetivo;
+    document.getElementById("idade").innerText = "Idade: " + eu.idade;
+
+    document.getElementById("whatsapp").href =
+      "https://wa.me/" + eu.telefone;
+  </script>
+</body>
+</html>

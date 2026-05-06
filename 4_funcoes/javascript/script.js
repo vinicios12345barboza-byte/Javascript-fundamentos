@@ -69,7 +69,6 @@ console.log(m)
 const testeArrow = () => {
     console.log("Está é uma arrow function")
 }
-
 testeArrow()
 
 const parOuImpar = (n) =>{
@@ -120,9 +119,8 @@ helloWorld();
 */
 
 
-
 // 7 - parametro opcional
-const multiplication = function(m,n){
+const multiplication = (m,n) => {
 
     if(n === undefined){
         return m * 2
@@ -144,9 +142,78 @@ const greeting = (name) => {
 greeting()
 greeting("Vinicios")
 
-const mostrarIdade = (idade = 18) => {
-    console.log(`Idade: ${idade}`);
+
+// 8 - valor default
+const customGreeting = (name, greet = "Olá") =>{
+    return `${greet}, ${name}`;
 }
 
+console.log(customGreeting("Vi"));
+console.log(customGreeting("Bianco", "Bom dia"))
+
+const mostrarIdade = (idade = 18) => {
+console.log(`Idade: ${idade}`);
+}
 mostrarIdade()
 mostrarIdade(23)
+
+const repeatText = (text, repeat = 2) =>{
+    for(let i = 0; i < repeat; i++){
+        console.log(text);
+    }
+}
+
+repeatText("Testando")
+repeatText("Agora repete 3 vezes", 3);
+
+// 9 - closure
+const someFuction = () =>{
+    let txt = "Alguma coisa"
+
+    function display(){
+        console.log(txt)
+    }
+
+    display()
+}
+
+someFuction()
+
+// 10 - mais sobre closure
+const multiplicationClosure = (n) => {
+    return (m) => {
+        return n * m;
+    }
+}
+const c1 = multiplicationClosure(5)
+const c2 = multiplicationClosure(10)
+console.log(c1)
+console.log(c2)
+console.log(c1(5))
+console.log(c2(10))
+
+// 11 - recursion
+const untilTen = (n, m) => {
+    if( n < 10){
+        console.log("A função parou de executar!")
+    } else {
+        const x = n - m
+        console.log(x)
+
+        untilTen(x, m);
+    }
+}
+
+untilTen(20, 5);
+
+const factorial = (x) =>{
+    if(x === 0){
+        return 1
+    } else {
+        return x * factorial(x - 1)
+    }
+}
+
+const num = 6
+const result = factorial(num)
+console.log(`O fatorial do número ${num} é ${result}`)

@@ -1,4 +1,4 @@
-/*
+
 // 1 - Number
 console.log(typeof 2);
 console.log(typeof 5.98);
@@ -57,8 +57,7 @@ console.log( 9 + "9");
 
 console.log( 9 === "9");
 console.log(9 != "9");
-console.log(9 !== "9");  */
-
+console.log(9 !== "9"); 
 
 // 11 - Operadores Lógicos
 console.log(true && true);
