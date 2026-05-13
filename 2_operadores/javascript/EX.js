@@ -1,3 +1,61 @@
+const alquimia = (energiadoAlquimista, materialDisponivel)=>{
+
+   if(energiadoAlquimista >= 50 && materialDisponivel){
+      console.log("ALQUIMIA MIDIA")
+      return
+   }
+
+   console.log("VAZAAAAAAAA")
+}
+
+alquimia(67, true)
+
+
+const login = (email, senha, nivel) => {
+   if(!email && !senha){
+      console.log("Você não tem conta")
+      return
+   }
+
+   const loginValido = email == "Vinicios123@email.com"
+   const senhaValida = senha == 1234
+
+   if(!loginValido && !senhaValida){
+      console.log("Email e senha inválidos")
+      return
+   }
+
+   if(!loginValido){
+      console.log("Email inválido")
+      return
+   }
+
+   if(!senhaValida){
+      console.log("Senha inválida")
+      return
+   }
+
+   if(nivel < 2){
+      console.log("Sai betinha")
+      return
+   }
+
+   console.log("Login feito")
+}
+
+login("Vinicios123@email.com", 1234, 3)
+
+let str = "123"
+console.log(typeof str)
+let num = Number(str)
+console.log(typeof num)
+
+let age = Number("an arbitrary string instead of a nb")
+console.log(age)
+
+
+
+
 // let o = 0 
 // while(o < 10){
 //     console.log(`Vamos contar ${o}`)
@@ -38,8 +96,3 @@
 // }
 
 
-const somar = (y, x) =>{
-   return y + x
-}
-
-console.log(`A soma entre x e y é ${somar(5, 5)}`)

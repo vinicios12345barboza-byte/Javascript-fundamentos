@@ -1,6 +1,6 @@
 /*
 // 1 - Criando uma função
-function minhaFuncao(){
+function minhaFuncao(){ 
     console.log("Testando")
 }
 minhaFuncao();
@@ -191,6 +191,7 @@ console.log(c1)
 console.log(c2)
 console.log(c1(5))
 console.log(c2(10))
+
 
 // 11 - recursion
 const untilTen = (n, m) => {

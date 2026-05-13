@@ -67,12 +67,10 @@ while(d < numeross.length){
 
 console.log(resultado);
 
-const pqp = [10, 20,30,40]
-let p = 0
 
-while( p < pqp.length){
+const pqp = [10, 20,30,40]
+for(let p = 0; p < pqp.length; p++){
     console.log(pqp[p])
-    p++
 }
 
 
@@ -140,6 +138,38 @@ while(pp < pessoas.length){
 }
 
 
+const login = ({ name, email, senha } = {}) => {
+    if (!email || !senha) {
+        console.log("Preencha email e senha")
+        return
+    }
+
+    const emailValido = email === "Vinicios12345@gmail.com"
+    const senhaValida = senha === 1234
+    const nomeValido = name === "vi"
+
+    if (!emailValido && !senhaValida) {
+        console.log("Email e senha inválidos!")
+        return
+    }
+
+    if (!emailValido) {
+        console.log("Email inválido")
+        return
+    }
+
+    if (!senhaValida) {
+        console.log("Senha inválida!")
+        return
+    }
+
+    if (!nomeValido) {
+        console.log("Seu nome está errado")
+        return
+    }
+
+    console.log("Seja bem vindo!")
+}
 // let numeros = [2, 4, 6];
 // let total = 0;
 

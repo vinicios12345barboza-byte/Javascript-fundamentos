@@ -1,39 +1,45 @@
-// function soma(a, b){
-//    return a + b;
-// }
-
-// function menos(a, b){
-//     return a - b;
-// }
-
-// function multiplicar(a, b){
-//     return a * b;
-// }
-
-// function dividir(a, b){
-//     return a / b
-// }
-
-// function calcular(a, b, operacao){
-//     if(operacao === "+"){
-//     return soma(a,b)
-// } else if(operacao === "-"){
-//     return menos(a, b)
-// } else if(operacao === "*"){
-//     return multiplicar(a, b)
-// } else if(operacao === "/"){
-//     return dividir(a,b)
-// } else{
-//      return "operação inválida"
-// }
-// }
+/*
+const operacao = prompt("Qual operação você deseja realizar? +, -, *, /")
+const num1 = Number(prompt("Primeiro número"))
+const num2 = Number(prompt("Segundo número"))
+const resultado = calcular(operacao, num1, num2)
+alert(`O resultado é ${resultado}`)
 
 
-// const operacao = prompt("Digite uma operação + - * /");
-// const n1 = Number(prompt("Digite um número"));
-// const n2 = Number(prompt("Digite outro número"));
-// alert(calcular(n1, n2, operacao))
+function soma(a, b)
+{
+    return a + b;
+}
 
+function subtracao(a, b)
+{
+    return a - b;
+}   
+
+function multiplicacao(a, b)
+{
+    return a * b;
+}
+
+function divisao(a, b)
+{
+    return a / b;
+}
+
+function calcular(operacao, num1, num2){
+    if(operacao === "+"){
+        return soma(num1, num2);
+    }
+    if(operacao === "-"){
+        return subtracao(num1, num2);
+    }
+    if(operacao === "*"){
+        return multiplicacao(num1, num2);
+    }
+    if(operacao === "/"){
+        return divisao(num1, num2);
+    }
+} */
 
 // // verificação
 // let idade = 20
@@ -52,8 +58,7 @@ function teste(){
         let nome = "Sarah"
         console.log(nome)
      }
-
-     teste2()
+    teste2()
 
 }
 
@@ -465,4 +470,4 @@ const s = (id, nam, nn) =>{
     console.log("Seja bem vindo.")
 }
 
-s(23, "V23", 4)
+s(23, "V23", 6)

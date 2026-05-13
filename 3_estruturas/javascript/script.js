@@ -77,7 +77,7 @@ const users = [
     {nome: "Sarah", idadee: 18}
 ];
 console.table(users); 
-
+*/
 
 // 7 - if
 const m = 10;
@@ -85,7 +85,7 @@ const m = 10;
     console.log("M é maior que 5");
 }
 
-// const u = "23";
+const u = "23";
   if(u == 23){
     console.log("Olá, 23!");
 } else {
@@ -133,7 +133,7 @@ if(shiu === lg ){
     alert("Você não tem conta!")
 } 
 
-9 - else if (funciona quando um script é verdadeiro)
+// 9 - else if (funciona quando um script é verdadeiro)
  if(1 > 2){
     console.log("Não!")
 } else if(2 > 3){
@@ -235,18 +235,17 @@ for(let ui = 0; ui < 10; ui++ ){
 }
 }
 }
-*/
+
 
 // 14 - break
-for(let g  = 20; g > 10; g--){
-    console.log(`Valor de g é ${g}`);
+for(let g = 20; g > 10; g--){
+    console.log(`O valor de g é ${g}`)
 
     if(g === 15){
-        console.log("O g é 15!")
+        console.log("G é 15")
         break;
     }
 }
-
 /* 
 for(let uiui = 50; uiui > 40; uiui--){
    console.log(`O valor de uiui é ${uiui}`)

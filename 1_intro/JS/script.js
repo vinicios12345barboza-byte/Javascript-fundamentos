@@ -1,16 +1,9 @@
-console.log("Testando JS 2!")
+console.log(Number("123"))
+console.log(Number("123z"))
+console.log(Number(true))
+console.log(Number(false))
 
-const din = (dinheiro) =>{
-
-    if(dinheiro >= 100000){
-        console.log("Pode ir pra disney")
-        return
-    }
-
-    console.log("Fica na baixada animal")
-}
-
-din(1000000)
-
-const soma = (a, b) => a + b;
-console.log(`a soma entre A e B é: ${soma(5, 6)}`);
+console.log(Boolean(1))
+console.log(Boolean(0))
+console.log(Boolean("Hello"))
+console.log(Boolean(""))

@@ -1,3 +1,4 @@
+
 // 1 - arrays
 const lista = [1,2,3,4,5]
 console.log(lista);
@@ -14,7 +15,7 @@ console.log(arr[aa])
 console.log(arr[2])
 
 // 3 - Propriedades
-const numbers = [5, 3, 4]
+const numbers = [5, 4, 3]
 console.log(numbers.length);
 
 const myName = "Vinicios"
@@ -22,7 +23,7 @@ console.log(myName.length);
 
 
 // 4 - Métodos
-const otherNumbers = [1, 2, 3]
+const otherNumbers = [2, 1, 0]
 const allNumbers = numbers.concat(otherNumbers)
 console.log(allNumbers);
 
@@ -76,12 +77,64 @@ console.log(obj2);
 console.log(Object.keys(obj))
 console.log(Object.keys(obj2))
 console.log(Object.keys(car))
+console.log(Object.keys(person))
 
 console.log(Object.entries(obj))
-// 9 - 
-// 10 - 
-// 11 - 
-// 12 - 
+console.log(Object.entries(person))
+
+
+// 9 - Mutação
+const a ={
+    name: "Bianco"
+}
+
+const b = a
+console.log(a);
+console.log(b);
+console.log(a === b)
+a.age = 23
+console.log(b)
+console.log(a)
+delete b.age
+console.log(a)
+console.log(b)
+
+
+// 10 - loops em arrays
+const users = ["Vinicios", "Bianco", "v23"];
+for(let i = 0; i < users.length; i++){
+    console.log(`Listando o usuário: ${users[i]}`)
+}
+
+let numeros = [30, 40, 20]
+let total = 0
+
+for(let i = 0; i < numeros.length; i++){
+    total = total + numeros[i]
+}
+
+console.log(total)
+
+// 11 - Métodos de array: push e pop 
+const frutas = ["Banana", "Morango", "Abacate"]
+frutas.push("Maça")
+console.log(frutas)
+console.log(frutas.length)
+frutas.pop()
+console.log(frutas)
+const itemRemovido = frutas.pop()
+console.log(itemRemovido)
+console.log(frutas) 
+frutas.push("Pitaya", "Manga", "Uva")
+console.log(frutas)
+
+// 12 - Métodos de array: shift e unshift
+const carros = ["Ix35", "Voyage", "Corolla"]
+const carror = carros.shift()
+console.log(carros)
+console.log(carror)
+carros.unshift("Creta")
+console.log(carros)
 // 13 - 
 // 14 - 
 // 15 - 
