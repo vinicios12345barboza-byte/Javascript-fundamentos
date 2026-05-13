@@ -1,2 +1,2 @@
-# Javascript
+# Javascript-exercicios
 Curso de JavaScript
