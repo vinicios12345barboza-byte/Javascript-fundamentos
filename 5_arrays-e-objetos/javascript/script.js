@@ -1,4 +1,4 @@
-
+/*
 // 1 - arrays
 const lista = [1,2,3,4,5]
 console.log(lista);
@@ -133,9 +133,151 @@ const carros = ["Ix35", "Voyage", "Corolla"]
 const carror = carros.shift()
 console.log(carros)
 console.log(carror)
-carros.unshift("Creta")
+carros.unshift("Creta", "Nivus")
+carros.unshift("Tinguan")
 console.log(carros)
-// 13 - 
-// 14 - 
-// 15 - 
-// 16 - 
+
+
+
+// 13 - Métodos de array: indexOf e lastIndexOf
+const myElements = ["Morango", "Maça", "Abacate", "Pera", "Abacate"]
+console.log(myElements.indexOf("Maça"))
+console.log(myElements.indexOf("Abacate"))
+console.log(myElements[2])
+console.log(myElements[myElements.indexOf("Abacate")])
+console.log(myElements.lastIndexOf("Abacate"))
+
+// 14 - métodos de array: slice
+const testeSlice = ["a", "b", "c", "d", "e", "f"];
+const subArray = testeSlice.slice(2, 4);
+console.log(subArray)
+console.log(testeSlice)
+const subArray2 = testeSlice.slice(2, 4 + 1)
+console.log(subArray2)
+
+
+// 15 - métodos de array: forEach
+const nums = [1, 2, 3,4, 5]
+nums.forEach((numero) =>{
+    console.log(`O número é ${numero}`)
+})
+
+const posts = [
+    {title: "Primeiro post", category: "PHP"},
+    {title: "Segundno post", category: "Python"},
+    {title: "Terceiro post", category: "Java"},
+];
+posts.forEach((post) => {
+    console.log(`Esses são os posts: ${post.title}, da categoria: ${post.category}`)
+})
+
+// 16 - métodos de array: incloudes
+const brands = ["BMW", "Hyundai", "FIAT"]
+console.log(brands.includes("FIAT"));
+console.log(brands.includes("KIA"));
+if (brands.includes("BMW")){
+    console.log("Há carros da bmw!")
+}
+
+// 17 - métodos de array: reverse
+const reverseTest = [1, 2, 3 ,4, 5]
+reverseTest.reverse();
+console.log(reverseTest);
+*/
+
+
+// 18 - métodos de string: trim
+const trimTest = "  testando \n     "
+console.log(trimTest)
+console.log(trimTest.trim())
+console.log(trimTest.length)
+console.log(trimTest.trim().length)
+
+
+// 19 - métodos de string: padStar
+const testePadStar = "1"
+const newNumbar = testePadStar.padStart(4, "0")
+console.log(testePadStar)
+console.log(newNumbar)
+const testePAdEnd = newNumbar.padEnd(10, "0")
+console.log(testePAdEnd)
+
+// 20 - métodos de string: Split
+const frase= "O rato roeu"
+const arrayDaFrase = frase.split(" ")
+console.log(arrayDaFrase)
+
+
+// 21 - métodos de string: Join
+const fraseDenovo = arrayDaFrase.join(" ")
+console.log(fraseDenovo)
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`
+console.log(fraseDeCompra)
+
+// 22 - métodos de string: Repeat
+const palavra = "Testando "
+console.log(palavra.repeat(5))
+
+// 23 - Rest operator
+const somaInfinita = (...argumentos) =>{
+    let total = 0
+    for(let i = 0; i < argumentos.length; i++){
+        total += argumentos[i]
+    }
+    return total
+}
+console.log(somaInfinita(1,2,3))
+console.log(somaInfinita(20, 23, 1))
+
+
+// 24 - Estrutura for of
+const somaInfinita2 = (...arg) =>{
+    let total = 0
+    for(num of arg){
+        total += num;
+    }
+    return total;
+}
+console.log(somaInfinita2(1,2,3));
+
+// 25 - Destructuring em objetos
+const userDetails = {
+    firstName: "Sarah",
+    lastName: "Vieira",
+    job: "QA"
+}
+const{firstName, lastName, job} = userDetails
+console.log(firstName, lastName, job)
+  
+// renomear variaveis
+const{firstName: primeiroNome} = userDetails
+console.log(primeiroNome)
+
+// 26 - Destructuring em arrays
+const myList = ["Avião", "Submarino", "Carro"]
+const[veiculoA, veiculoB, veiculoC] = myList
+console.log(veiculoA, veiculoB, veiculoC)
+
+
+// 27 - Conhecendo o JSON
+const myJSon = '{"name": "Vinicios", "age": 19, "skills": ["JavaScript", "Python", "Ruby"]}';
+console.log(myJSon)
+console.log(typeof myJSon)
+
+// 28 - Conversão de JSON (JSON para objeto e objeto para JSON)
+const myObject = JSON.parse(myJSon)
+console.log(myObject)
+console.log(myObject.name)
+console.log(typeof myObject) 
+
+// json invalido
+const badJson = '{"name": vinicios, "age": 19 }';
+// const myBad = JSON.parse(badJson)
+
+myObject.programador = true
+console.log(myObject)
+
+const myNewJson = JSON.stringify(myObject)
+console.log(myNewJson)
+console.log(typeof myNewJson)

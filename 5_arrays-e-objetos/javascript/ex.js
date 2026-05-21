@@ -88,6 +88,7 @@ delete car.km;
 
 
 
+
 const car2 ={
     engine: 2.0,
     brand: "Hyundai",
@@ -110,6 +111,7 @@ const resultadoo = {
 console.table(car)
 console.log(resultadoo)
 
+
 // Object.assign(car2, car);
 // console.log(car2)
 
@@ -120,56 +122,59 @@ let pessoas = [
     {nome: "Vinicios", idade: 19},
     {nome: "Luiz", idade: 2}
 ]
-let pp = 0
-while(pp < pessoas.length){
-    let pessoa = pessoas[pp]
 
-    if(pessoa.idade >= 18){
-        console.log(pessoa.nome)
-    }
+const sub = pessoas.slice(0,3)
+console.table(sub)
 
-    if(pessoa.idade < 10){
-        console.log(`Você é muito novo, ${pessoa.nome}`)
-    }
+// let pp = 0
+// while(pp < pessoas.length){
+    //     let pessoa = pessoas[pp]
 
-    
-    pp++
+    //     if(pessoa.idade >= 18){
+//         console.log(pessoa.nome)
+//     }
 
-}
+//     if(pessoa.idade < 10){
+//         console.log(`Você é muito novo, ${pessoa.nome}`)
+//     }
 
 
-const login = ({ name, email, senha } = {}) => {
-    if (!email || !senha) {
-        console.log("Preencha email e senha")
-        return
-    }
+//     pp++
 
-    const emailValido = email === "Vinicios12345@gmail.com"
-    const senhaValida = senha === 1234
-    const nomeValido = name === "vi"
+// }
 
-    if (!emailValido && !senhaValida) {
-        console.log("Email e senha inválidos!")
-        return
-    }
+// const login = ({ name, email, senha } = {}) => {
+//     if (!email || !senha) {
+//         console.log("Preencha email e senha")
+//         return
+//     }
 
-    if (!emailValido) {
-        console.log("Email inválido")
-        return
-    }
+//     const emailValido = email === "Vinicios12345@gmail.com"
+//     const senhaValida = senha === 1234
+//     const nomeValido = name === "vi"
 
-    if (!senhaValida) {
-        console.log("Senha inválida!")
-        return
-    }
+//     if (!emailValido && !senhaValida) {
+//         console.log("Email e senha inválidos!")
+//         return
+//     }
 
-    if (!nomeValido) {
-        console.log("Seu nome está errado")
-        return
-    }
+//     if (!emailValido) {
+//         console.log("Email inválido")
+//         return
+//     }
 
-    console.log("Seja bem vindo!")
-}
+//     if (!senhaValida) {
+//         console.log("Senha inválida!")
+//         return
+//     }
+
+//     if (!nomeValido) {
+//         console.log("Seu nome está errado")
+//         return
+//     }
+
+//     console.log("Seja bem vindo!")
+// }
 // let numeros = [2, 4, 6];
 // let total = 0;
 
@@ -182,3 +187,93 @@ const login = ({ name, email, senha } = {}) => {
 // }
 
 // console.log(total);
+
+
+let jogos = [
+    {nome: "Zelda", disponivel: true},
+    {nome: "Mario", disponivel: false},
+    {nome: "Minecraft", disponivel: true},
+    {nome: "GTA V", disponivel: true},
+    {nome: "FIFA", disponivel: false},
+];
+let jogosEmEstoque = []
+
+jogos.forEach((jogo) =>{
+    if(jogo.disponivel === true){
+        jogosEmEstoque.push(jogo)
+    }
+})
+
+let resul = jogosEmEstoque.slice(0, 2)
+console.log(resul)
+
+const Hyundai = [
+    {modelo: "Creta", ano: 2026},
+    {modelo: "IX35", ano: 2019},
+    {modelo: "HB20", ano: 2024},
+]
+
+const disponivelHyundai = []
+Hyundai.forEach((carro) =>{
+    if(carro.ano > 2018){
+        disponivelHyundai.push(carro)
+    }
+})
+
+let resultadoHyundai = disponivelHyundai
+resultadoHyundai.reverse()
+console.table(resultadoHyundai)
+
+const roupas = [
+    {nome: "camisa", preço: 50},
+    {nome: "cueca", preço: 30},
+    {nome: "casaco", preço: 120},
+]
+const disponivelRoupas = []
+roupas.forEach((roupa) =>{
+    if(roupa.preço > 70){
+        disponivelRoupas.push(roupa)
+    }
+})
+
+let res = disponivelRoupas
+console.log(res)
+
+
+const usuarios = [
+    {id: 1, nome: "Sérgio", cargo: "Devops"},
+    {id: 2, nome: "Bruno", cargo: "Fullstack"},
+    {id: 3, nome: "Vinicios", cargo: "Engenheiro"},
+]
+
+for(const {nome, cargo}of usuarios){
+   console.log(nome, cargo)
+}
+usuarios.forEach((user) =>{
+    const {id, nome} = user
+    if(id === 1){
+        user.cargo = "Back"
+        console.log(nome, user.cargo.padEnd(15, "."))
+    }
+
+})
+
+console.log(usuarios)
+const apenasDevops = usuarios.filter((user) => {
+    return user.cargo === "Devops"
+})
+console.log(apenasDevops)
+
+// apenas um e dois
+const apenasUmeTres = usuarios.filter(user => user.id !== 2)
+console.log(apenasUmeTres)
+// array do engenheiro
+
+// for(let j = 0; j < jogos.length; j++){
+//     if(jogos[j].disponivel === true){
+//         jogosEmEstoque.push(jogos[j])
+//     }
+// }
+
+// let resultadoFIm = jogosEmEstoque.slice(0, 2)
+// console.log(resultadoFIm)
