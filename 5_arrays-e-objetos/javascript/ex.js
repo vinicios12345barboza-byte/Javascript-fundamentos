@@ -86,9 +86,6 @@ const car ={
 }
 delete car.km;
 
-
-
-
 const car2 ={
     engine: 2.0,
     brand: "Hyundai",
@@ -123,7 +120,7 @@ let pessoas = [
     {nome: "Luiz", idade: 2}
 ]
 
-const sub = pessoas.slice(0,3)
+const sub = pessoas.slice(0,2)
 console.table(sub)
 
 // let pp = 0

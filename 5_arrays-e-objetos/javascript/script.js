@@ -21,7 +21,7 @@ console.log(numbers.length);
 const myName = "Vinicios"
 console.log(myName.length);
 
-
+ 
 // 4 - Métodos
 const otherNumbers = [2, 1, 0]
 const allNumbers = numbers.concat(otherNumbers)
@@ -145,7 +145,8 @@ console.log(myElements.indexOf("Maça"))
 console.log(myElements.indexOf("Abacate"))
 console.log(myElements[2])
 console.log(myElements[myElements.indexOf("Abacate")])
-console.log(myElements.lastIndexOf("Abacate"))
+console.log(myElements.lastIndexOf("Abacate")) 
+*/
 
 // 14 - métodos de array: slice
 const testeSlice = ["a", "b", "c", "d", "e", "f"];
@@ -183,7 +184,6 @@ if (brands.includes("BMW")){
 const reverseTest = [1, 2, 3 ,4, 5]
 reverseTest.reverse();
 console.log(reverseTest);
-*/
 
 
 // 18 - métodos de string: trim
