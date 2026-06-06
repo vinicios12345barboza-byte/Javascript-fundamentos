@@ -91,7 +91,7 @@ const car2 ={
     brand: "Hyundai",
     model: "Ix35",
     km: 20000,
-    doors: 4,
+    doors: 4, 
     vidro: "Fumê"
     
 }
@@ -186,6 +186,7 @@ console.table(sub)
 // console.log(total);
 
 
+
 let jogos = [
     {nome: "Zelda", disponivel: true},
     {nome: "Mario", disponivel: false},
@@ -193,16 +194,10 @@ let jogos = [
     {nome: "GTA V", disponivel: true},
     {nome: "FIFA", disponivel: false},
 ];
-let jogosEmEstoque = []
 
-jogos.forEach((jogo) =>{
-    if(jogo.disponivel === true){
-        jogosEmEstoque.push(jogo)
-    }
-})
+const vJogos = jogos.filter(jogo => jogo.disponivel).slice(0,2)
+console.log(vJogos)
 
-let resul = jogosEmEstoque.slice(0, 2)
-console.log(resul)
 
 const Hyundai = [
     {modelo: "Creta", ano: 2026},
@@ -210,37 +205,33 @@ const Hyundai = [
     {modelo: "HB20", ano: 2024},
 ]
 
-const disponivelHyundai = []
-Hyundai.forEach((carro) =>{
-    if(carro.ano > 2018){
-        disponivelHyundai.push(carro)
+const disponivelHyundai = Hyundai.filter(hyu => hyu.ano === 2019)
+console.log(disponivelHyundai)
+
+const aros = Hyundai.map(aro =>{
+    if(aro.modelo === "Creta"){
+        return {...aro, corDoAro: "Aro Preto"}
     }
+
+    return aro
 })
 
-let resultadoHyundai = disponivelHyundai
-resultadoHyundai.reverse()
-console.table(resultadoHyundai)
+console.log(Hyundai)
+console.log(aros)
+
 
 const roupas = [
     {nome: "camisa", preço: 50},
     {nome: "cueca", preço: 30},
     {nome: "casaco", preço: 120},
 ]
-const disponivelRoupas = []
-roupas.forEach((roupa) =>{
-    if(roupa.preço > 70){
-        disponivelRoupas.push(roupa)
-    }
-})
-
-let res = disponivelRoupas
-console.log(res)
-
+const disponivelRoupas = roupas.filter(roupa => roupa.preço <100)
+console.log(disponivelRoupas)
 
 const usuarios = [
-    {id: 1, nome: "Sérgio", cargo: "Devops"},
-    {id: 2, nome: "Bruno", cargo: "Fullstack"},
-    {id: 3, nome: "Vinicios", cargo: "Engenheiro"},
+    {id: 1, nome: "Sérgio", cargo: "Devops", carro: "IX35"},
+    {id: 2, nome: "Bruno", cargo: "Devops", carro: "HB20"},
+    {id: 3, nome: "Vinicios", cargo: "Engenheiro", carro: "Creta"},
 ]
 
 for(const {nome, cargo}of usuarios){
@@ -256,15 +247,25 @@ usuarios.forEach((user) =>{
 })
 
 console.log(usuarios)
-const apenasDevops = usuarios.filter((user) => {
-    return user.cargo === "Devops"
-})
+const apenasDevops = usuarios.filter(user => user.cargo === "Devops" )
 console.log(apenasDevops)
 
 // apenas um e dois
 const apenasUmeTres = usuarios.filter(user => user.id !== 2)
 console.log(apenasUmeTres)
-// array do engenheiro
+
+
+const usersComCarros = usuarios.map(usuario =>{
+
+    const carroEncontrado = Hyundai.find(carro => carro.modelo === usuario.carro)
+
+    return {
+        ... usuario,
+        dadosDOCarro: carroEncontrado
+    }
+})
+console.log(usersComCarros)
+
 
 // for(let j = 0; j < jogos.length; j++){
 //     if(jogos[j].disponivel === true){

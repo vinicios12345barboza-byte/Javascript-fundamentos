@@ -98,11 +98,11 @@ if(u === "30"){
 
 console.log( u === "23", u === "30");
 
-let naci = prompt("Qual a sua nacionalidade?");
-if(naci == "Brasileiro"){
-    alert("Você é brasileiro!");
-    console.log(`Sua NACIONALIDADE é ${naci}`)
-} 
+// let naci = prompt("Qual a sua nacionalidade?");
+// if(naci == "Brasileiro"){
+//     alert("Você é brasileiro!");
+//     console.log(`Sua NACIONALIDADE é ${naci}`)
+// } 
 
 // 8 - else
 // const loggedIn = false 
@@ -123,15 +123,15 @@ if(naci == "Brasileiro"){
 // }
 
 
-const lg = "Vinicios@gmail.com"
-const shiu = prompt("Qual é o seu gmail?")
-if(shiu === lg ){
-    console.log("Seu login está certo")
-    alert("Você tem cadastro!")
-} else {
-    console.log("Você não tem login nesta porra!")
-    alert("Você não tem conta!")
-} 
+// const lg = "Vinicios@gmail.com"
+// const shiu = prompt("Qual é o seu gmail?")
+// if(shiu === lg ){
+//     console.log("Seu login está certo")
+//     alert("Você tem cadastro!")
+// } else {
+//     console.log("Você não tem login nesta porra!")
+//     alert("Você não tem conta!")
+// } 
 
 // 9 - else if (funciona quando um script é verdadeiro)
  if(1 > 2){
@@ -160,6 +160,19 @@ let ida = 19
  } else {
     console.log("Você é obrigado a votar!")
 }
+
+const votar = (idade) =>{
+
+    if(idade > 16 && idade <18 || idade >65){
+        return "Voto opicional"
+    } else if(idade <15){
+        return "Você não pode votar"
+    } else{
+        return "Você é obrigado a votar canalha filha da puta"
+    }
+}
+
+console.log(votar(23))
 
 let vel = 54
     if(vel <= 70){
