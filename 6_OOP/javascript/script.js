@@ -8,7 +8,17 @@ const animal = {
 console.log(animal.nome)
 animal.latir(); 
 
-// 2 - mais sobre métodos
+const car = {
+    marca: "Hyundai",
+    buzinar(){
+        console.log("BII")
+    }
+}
+
+console.log(car.marca)
+car.buzinar()
+
+// 2 - mais sobre métodos ES5
 const pessoa ={
     nome: "Vinicios",
 
@@ -25,21 +35,77 @@ console.log(pessoa.getNome())
 pessoa.setNome("Sarah")
 console.log(pessoa.getNome())
 
+// usar no ES6
+const pessoa3 ={
+    _nome: "Vinicios",
+
+    get nome(){
+        return this._nome;
+    },
+
+    set nomeNovo(novoName){
+        this._nome = novoName
+    }
+};
+
+console.log(pessoa3.nome)
+pessoa3.nomeNovo = "Sarah"
+console.log(pessoa3.nome)
+
+
+class Carro2 {
+    constructor(marca, ano){
+        this._marca = marca
+        this._ano = ano
+    }
+
+    get marca(){
+        return `${this._marca} do ano: ${this._ano}`
+    }
+
+    set config(novoModel){
+        this._marca = novoModel
+    }
+
+    andar(){
+        console.log(`O carro ${this._marca} está andando....`)
+    }
+}
+
+const RAM = new Carro2("DODGE RAM" , 2015)
+console.log(RAM.marca)
+RAM.andar()
+
+class Ca {
+    constructor(marca, ano){
+        this.marca = marca
+        this.ano = ano
+    }
+
+    get infos(){
+        return `${this.marca} - ${this.ano}`
+    }
+}
+
+const bwm = new Ca("BMW 320", 2023)
+console.log(bwm.infos)
+
+
 const carro = {
     marca: "Civic",
     ano: 2012,
 
-    getInfos: function(){
+    get Infos(){
       return `${this.marca} - ${this.ano}`
     },
 
-    setCar(novaMarca){
+    set Car(novaMarca){
         this.marca = novaMarca
     }
 }
-console.log(carro.getInfos())
-carro.setCar("Hb20")
-console.log(carro.getInfos())
+console.log(carro.Infos)
+carro.Car = "Golfe Sapão"
+console.log(carro.Infos)
 
 // 3 - prototype
 /*
@@ -104,6 +170,21 @@ console.log(pitBull)
 
 console.log(pitBull.patas)
 
+class Auau {
+    constructor(raca, nascimento){
+        this._raca = raca
+        this._nasc = nascimento
+        this.patas = 4
+    }
+
+    get infos(){
+        return `O cachorro da raça ${this._raca} nasceu em: ${this._nasc}`
+    }
+}
+
+const pastorAlemaoo = new Auau("Pastor Alemanhã", 2023)
+console.log(pastorAlemaoo.infos)
+console.log(pastorAlemaoo.patas)
 
 const carroo ={
     modelo: null,

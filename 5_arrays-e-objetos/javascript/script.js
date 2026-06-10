@@ -205,7 +205,7 @@ console.log(testePAdEnd)
 // 20 - métodos de string: Split
 const frase= "O rato roeu"
 const arrayDaFrase = frase.split(" ")
-console.log(arrayDaFrase)
+console.log(arrayDaFrase) 
 
 
 // 21 - métodos de string: Join
@@ -240,6 +240,11 @@ const somaInfinita2 = (...arg) =>{
     return total;
 }
 console.log(somaInfinita2(1,2,3));
+
+const names = ["VInicios", "Sarah", "Su"]
+for(const name of names){
+    console.log(name)
+}
 
 // 25 - Destructuring em objetos
 const userDetails = {
@@ -281,3 +286,13 @@ console.log(myObject)
 const myNewJson = JSON.stringify(myObject)
 console.log(myNewJson)
 console.log(typeof myNewJson)
+
+const userr = {nome: "vin", age: 19}
+const textoJson = JSON.stringify(userr)
+console.log(textoJson)
+
+
+const objUser = JSON.parse(textoJson)
+console.log(objUser)
+objUser.programador = true
+console.log(objUser)

@@ -303,3 +303,67 @@ class ProductGamer extends Product{
 const devProduct = new ProductGamer("GTAV", "Jogo físico", 230)
 console.log(devProduct.name)
 console.log(devProduct.productDescont(10))
+
+
+
+class User{
+    constructor(nome, senhaCorreta){
+        this._nome = nome
+        this._senha = senhaCorreta
+        this.conectado = false
+    }
+
+    logar(senhaDigitada){
+        if(senhaDigitada === this._senha){
+            this.conectado = true
+            console.log(`Login feito com sucesso!\nSeja bem vindo, ${this._nome}.`)
+        } else{
+            console.log("Senha inválida! Acesso negado.")
+        }
+    }
+
+    deslogar(){
+        this.conectado = false
+        console.log(`${this._nome} saiu do sistema.`)
+    }
+}
+
+const devJúnior = new User("Vinicios", "V2330S")
+devJúnior.logar("jdhw")
+devJúnior.logar("V2330S")
+devJúnior.deslogar()
+
+class Jogos{
+    constructor(nome, genero, preco){
+        this.nome = nome
+        this.genero = genero
+        this.preco = preco
+    }
+
+    aplicarDescont(valor){
+        this.preco = this.preco - valor
+        console.log(`Desconto aplicado! O jogo ${this.nome} está: R$ ${this.preco}! `)
+    }
+}
+
+const jogo1 = new Jogos("GTA V", "Ação", 350)
+const jogo2 = new Jogos("ZELDA", "RPG", 430)
+
+
+const prateleiraJogos = [
+    new Jogos("GTA V", "AÇÃO", 150),
+    new Jogos("ZELDA", "RPG", 350),
+    new Jogos("Minecraft", "SOBREVIVÊNCIA",99),
+    new Jogos("LOL PREMIUM", "RPG", 530)
+]
+
+const apenasRPGs = prateleiraJogos.filter(jogo => jogo.genero === "RPG")
+console.log("\n APENAS JOGOS RPG:")
+console.log(apenasRPGs)
+
+// com desconto!
+apenasRPGs.map(jogo => jogo.aplicarDescont(20))
+console.log(apenasRPGs)
+
+console.log("\n APLICANDO PROMOÇÃO EM TUDO!")
+prateleiraJogos.map(jogo => jogo.aplicarDescont(30))
