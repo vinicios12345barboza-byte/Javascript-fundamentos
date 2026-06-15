@@ -358,7 +358,7 @@ const prateleiraJogos = [
 ]
 
 const apenasRPGs = prateleiraJogos.filter(jogo => jogo.genero === "RPG")
-console.log("\n APENAS JOGOS RPG:")
+console.log("\n TODOS OS RPGs:")
 console.log(apenasRPGs)
 
 // com desconto!
