@@ -187,6 +187,30 @@ async function chamadaAsync() {
 chamadaAsync()
 
 
+
+function fazerEntrega(){
+    return new Promise((resolve, reject) =>{
+        let motocaChegou = false
+
+        if(motocaChegou){
+            resolve("Chegou rapido")
+        } else{
+            reject("Motoboy saiu!")
+        }
+    })
+}
+
+async function chamarMotoboy() {
+    try{
+        const sla = await fazerEntrega()
+        console.log(`O pedido chegou: ${sla}`)
+    } catch(erro){
+        console.log(`Ih, deu ruim: ${erro}`)
+    }
+}
+chamarMotoboy()
+
+
 // 9 - Generators
 function* generator(){
     yield 1
@@ -215,3 +239,5 @@ const jogo = geradorDeJogos()
 console.log(jogo.next())
 console.log(jogo.next())
 console.log(jogo.next())
+
+

@@ -1,63 +1,63 @@
-console.log(Number("123"))
-console.log(Number("123z"))
-console.log(Number(true))
-console.log(Number(false))
-
-console.log(Boolean(1))
-console.log(Boolean(0))
-console.log(Boolean("Hello"))
-console.log(Boolean(""))
-
-
-function jogo(numero){
-    
-    const segredo = 7
-
-    if(numero < segredo){
-        console.log("É maior")
-    } 
-    
-    else if(numero > segredo){
-        console.log("É menor")
-    } 
-    
-    else{
-        console.log("Acertou!")
+class Veiculo {
+    constructor(marca,  modelo){
+        this.marca = marca
+        this.modelo = modelo
     }
 }
 
-jogo(8)
-
-class Produto{
-    constructor(nome, precoOrg){
-        this._nome = nome
-        this._preco = precoOrg
+class Moto extends Veiculo{
+    constructor(marca, modelo, cilindrada){
+        super(marca, modelo)
+        this._cilindrada = cilindrada
     }
 
-    get precoFormatado(){
-        return `${this._nome} do valor: ${this._preco.toFixed(2)}`
+    get infos(){
+        return `A sua moto da marca: ${this.marca}, do modelo: ${this.modelo} tem essa quantia de cilindradas: ${this._cilindrada}`
     }
 
-    set atualizarPreco(novoPreco){
-        if(novoPreco > 0){
-            this._preco = novoPreco
+    set cilindrada(cl){
+        
+        if(cl <= 0){
+            console.log(`Erro: ${cl} é inválido`)
         } else{
-            console.log("ERRO: Preço Inválido!")
+            this._cilindrada = cl
         }
     }
 }
 
-const camisa = new Produto("Camisa Barça", 350)
-console.log(camisa.precoFormatado)
-camisa.atualizarPreco = 279.99
-console.log(camisa.precoFormatado)
+const honda = new Moto("Honda", "Biz", "125")
+console.log(honda.infos)
+honda.cilindrada = 0
 
-const xbox = new Produto("XBOX X", 3500)
-console.log(xbox.precoFormatado)
-xbox.atualizarPreco = 3000
-console.log(xbox.precoFormatado)
 
-const carro = new Produto("BMW", 150000)
-console.log(carro.precoFormatado)
-carro.atualizarPreco = 130000
-console.log(carro.precoFormatado)
+function verificarVoto(age){
+
+    if(age <= 16){
+        throw new Error("Muito jovem para votar!")
+    }
+
+    return "Pode votar"
+}
+
+try{
+    const idade = verificarVoto(24)
+    console.log(idade)
+}catch(error){
+    console.log(`Sistema bloqueado: ${error.message}`)
+}
+
+verificarVoto()
+
+function fritarBife(){
+    return new Promise(resolve =>{
+        setTimeout(() => {
+            resolve("Bife no ponto!")
+        }, 2000);
+    })
+}
+
+async function preparaAlmoco() {
+    const almoco = await fritarBife()
+    console.log(almoco)
+}
+preparaAlmoco()
