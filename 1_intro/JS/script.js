@@ -25,7 +25,7 @@ class Moto extends Veiculo{
     }
 }
 
-const honda = new Moto("Honda", "Biz", "125")
+const honda = new Moto("Honda", "XRE", "300")
 console.log(honda.infos)
 honda.cilindrada = 0
 
