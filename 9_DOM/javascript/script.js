@@ -67,12 +67,31 @@ const firstLink = navLinks.querySelector("a")
 firstLink.setAttribute("href","https://www.google.com")
 console.log(firstLink.getAttribute("href"))
 firstLink.setAttribute("target", "_blank")
-// 12 - 
-// 13 - 
-// 14 - 
-// 15 - 
-// 16 - 
-// 17 - 
-// 18 - 
-// 19 - 
-// 20 - 
+
+
+// 11 - altura e largura
+const footer = document.querySelector("footer")
+console.log(footer.offsetWidth)
+console.log(footer.offsetHeight)
+
+console.log(footer.clientWidth)
+console.log(footer.clientHeight)
+
+
+// 12 - posicao de elemento
+const product1 = products[0]
+console.log(product1.getBoundingClientRect())
+
+
+// 13 - css com JS
+mainContainer.style.color = "blue"
+mainContainer.style.paddingBottom = "150px"
+mainContainer.style.backgroundColor = "rgb(68, 168, 1168)"
+
+
+// 14 - alterando estilos em varios elementos
+for(const li of listItens){
+    li.style.backgroundColor = "red"
+    li.style.color = "black"
+}
+
