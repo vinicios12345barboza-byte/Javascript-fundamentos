@@ -12,15 +12,30 @@ fazerEntrega
 .then(lanche => console.log(`Sucesso ${lanche}`))
 .catch(erro => console.log(`Erro: ${erro}`))
 
-const buscarUsuario = new Promise ((resolve, reject) => {
 
-        if(id === 1){
-            resolve("Vinicius")
-        } else {
-            reject("Usuário não encontrado")
+
+
+function fazerEntrega2(){
+    return new Promise((resolve, reject) =>{
+          let motoca = true
+        if(motoca){
+            resolve("CHegou")
+        } else{
+            reject("Errado")
         }
-
     })
+}
+
+
+async function motocaChegou() {
+    try{
+        const chegou = await fazerEntrega2()
+        console.log(`O pedido: ${chegou}`)
+    } catch (erro){
+        console.log(`Ih, deu ruim. Pedido: ${erro}`)
+    }
+}
+motocaChegou()
 
 
 
