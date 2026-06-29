@@ -95,16 +95,38 @@ window.addEventListener("scroll", (e) =>{
     }
 })
 
-// 11 - evento de foco
+// 10 - evento de foco
 const inputt = document.querySelector("#email")
 inputt.addEventListener("focus", (e) =>{
-    inputt.style.backgroundColor = "blue"
+  
+     inputt.style.color = "red"
     console.log("Entrou no input!")
 })
 
 inputt.addEventListener("blur", (e) =>{
-    inputt.style.color = "red"
+     inputt.style.backgroundColor = "blue"
     console.log("saiu do input!")
 })
-// 12 -
-// 13 -
+
+
+// 11 - Evento de carregamento de tela
+window.addEventListener("load", () => {
+    console.log("Toda a página, imagens e scripts foram carregados com sucesso!");
+});
+
+window.addEventListener("beforeunload", (e) => {
+   e.preventDefault()
+   e.returnValue = ""
+});
+
+// 12 - debouce
+let temporizador;
+
+window.addEventListener("scroll", () =>{
+    clearTimeout(temporizador)
+
+    temporizador = setTimeout(() =>{
+        console.log("Executando cálculo pesado do scroll com segurança!")
+    }, 500)
+})
+
